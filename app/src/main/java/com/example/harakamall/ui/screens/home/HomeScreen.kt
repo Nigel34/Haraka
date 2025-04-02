@@ -36,7 +36,7 @@ Column(modifier = Modifier.fillMaxSize()
 
         )
 
-    Image(painter = painterResource(R.drawable.Freelancing),
+    Image(painter = painterResource(R.drawable.freelancing),
         contentDescription = "home"
     )
     
