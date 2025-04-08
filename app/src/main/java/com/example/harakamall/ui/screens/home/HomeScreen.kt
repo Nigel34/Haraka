@@ -16,11 +16,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.harakamall.R
 import org.w3c.dom.Text
 
 @Composable
-fun HomeScreen(){
+fun HomeScreen(navController: NavController){
 Column(modifier = Modifier.fillMaxSize()
 ) {
     Text(
@@ -36,7 +38,8 @@ Column(modifier = Modifier.fillMaxSize()
 
         )
 
-    Image(painter = painterResource(R.drawable.freelancing),
+    Image(
+        painter = painterResource(R.drawable.freelancing),
         contentDescription = "home"
     )
     
@@ -62,5 +65,5 @@ Column(modifier = Modifier.fillMaxSize()
 @Preview(showBackground = true)
 @Composable
 fun HomescreenPreview(){
-    HomeScreen()
+    HomeScreen(rememberNavController())
 }
